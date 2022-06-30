@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>tinh dien tich hinh vuong</p>
+<input type="text" id="nhapso">
+<button onclick="tinhDienTich()">tinhtoan</button>
+<p id="hienthi"></p>
+<script>
+    function tinhDienTich() {
+        let nhap = +document.getElementById('nhapso').value
+        document.getElementById('hienthi').innerHTML=nhap*nhap;
+    }
+</script>
+</body>
+</html>

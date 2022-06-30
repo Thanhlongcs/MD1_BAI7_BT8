@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>tinh dien tich hinh tam giac</p>
+<label>canh a</label>
+<input type="text" id="a"><br>
+<label>canh b</label>
+<input type="text" id="b"><br>
+<button onclick="clickcalcu()">tinh toan</button>
+<p id="ketquala"></p>
+<script>
+    function clickcalcu() {
+        let canh1 = +document.getElementById('a').value;
+        let canh2 = +document.getElementById('b').value;
+        document.getElementById('ketquala').innerHTML=1/2*canh1*canh2;
+    }
+</script>
+</body>
+</html>

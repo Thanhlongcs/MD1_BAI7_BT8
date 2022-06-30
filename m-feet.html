@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>chuyen doi don vi</p>
+<input type="text" id="nhapvao">
+<select  id="chon1">
+  <option value="meter">m</option>
+  <option value="feet">ft</option>
+</select>
+<select  id="chon2">
+    <option value="meter">m</option>
+    <option value="feet">ft</option>
+</select>
+<button onclick="clickonchange()">thay doi</button>
+<p id="ketquaoday"></p>
+<script>
+    function clickonchange() {
+        let nhapso = +document.getElementById('nhapvao').value
+        let nhap = document.getElementById('chon1').value
+        let xuat = document.getElementById('chon2').value
+        if (nhap===xuat){
+            document.getElementById('ketquaoday').innerHTML=nhapso;
+        }else{
+            if (nhap==='meter'){
+                document.getElementById('ketquaoday').innerHTML=nhapso*3.2808;
+            }
+            else{
+                document.getElementById('ketquaoday').innerHTML=nhapso/3.2808;
+            }
+        }
+    }
+</script>
+</body>
+</html>

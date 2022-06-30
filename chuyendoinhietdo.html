@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>nhap so can chuyen</label>
+<input type="text" id="input">
+<select name="input2" id="input2" >
+<option value="Celsius">C</option>
+<option value="Fahrenheit">F</option>
+</select>
+<select name="input3" id="input3" >
+    <option value="Celsius">C</option>
+    <option value="Fahrenheit">F</option>
+</select>
+<button onclick="clickHere()">change</button>
+<p id="result"></p>
+<script>
+    function clickHere(){
+        let number = +document.getElementById('input').value
+        let imp = document.getElementById('input2').value
+        let exp = document.getElementById('input3').value
+        if (imp===exp){
+            document.getElementById('result').innerHTML=number;
+        }else{
+            if(imp==='Celsius'){
+                document.getElementById('result').innerHTML=number*9/5+32;
+            }
+            else{
+                document.getElementById('result').innerHTML=number/9*5-32;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
